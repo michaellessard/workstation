@@ -1,4 +1,4 @@
-# workstation
+# Workstation's playbook 
 Playbook to configure my Fedora workstation. 
 
 - Install some packages 
