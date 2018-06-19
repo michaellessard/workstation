@@ -1,0 +1,5 @@
+- name: Install packages 
+  dnf: name={{item}} state=latest
+  with_items: 
+    - htop
+    - screen
