@@ -1,0 +1,9 @@
+- name: Install python-psutil package
+  dnf: name=python2-psutil state=present
+
+- name: Copy wallpaper file
+  copy: src=files/wallpaper.jpg dest=/home/mlessard/.wallpaper.jpg owner=mlessard group=mlessard mode=600
+
+- name: Set GNOME Wallpaper
+  become_user: mlessard 
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/mlessard/.wallpaper.jpg'"
